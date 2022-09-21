@@ -11,3 +11,4 @@ var app1 = new ArrayList4Integers();
 //app1.Labb00();
 //app1.Labb3();
 //app1.TestLabbBarn();
+//app1.Labb5();

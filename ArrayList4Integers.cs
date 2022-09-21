@@ -11,6 +11,34 @@ namespace KYHdag5_ListorOchSträngar
 {
     internal class ArrayList4Integers
     {
+
+        public void Labb5()
+        {
+            var listWithNumbers = new List<int>();
+
+            listWithNumbers.Add(23);
+            listWithNumbers.Add(13);
+            listWithNumbers.Add(223);
+            listWithNumbers.Add(735);
+            listWithNumbers.Add(533);
+
+            for (int i = 0; i < listWithNumbers.Count; i++)
+            {
+                if (i == 4 || i == 2 || i == 0)
+                {
+                    Console.Write($"\nDetta index behåller sitt värde för att det ligger på ett jämt index: {listWithNumbers[i]}\n");
+                }
+
+                else if
+                    (i == 1 || i == 3)
+                {
+                    listWithNumbers[i] = 0;
+                    Console.WriteLine($"\nDetta index värde ändras till {listWithNumbers[i]}\n");
+                }
+            }
+            Console.WriteLine($"\nDe nummer som ändrats är de som ligger på udda index");
+        }
+
         public void Labb3()
         {
             var listWithStrings = new List<string>();
@@ -27,7 +55,6 @@ namespace KYHdag5_ListorOchSträngar
                     Console.WriteLine($"De namn som börjar och slutar med a och har minst 2 chars är: {name}");
                 }
             }
-
         }
         public void TestLabbBarn()
         {
@@ -67,8 +94,6 @@ namespace KYHdag5_ListorOchSträngar
             Console.WriteLine(numList.Max());
         }
 
-
-
         public void Labb0()
         {
             int[] numbers = new int[4];
@@ -89,10 +114,7 @@ namespace KYHdag5_ListorOchSträngar
                 }
             }
             Console.WriteLine($"Detta är det största angivna talet {biggestSoFar}");
-
-
         }
-
 
         public void Labb2()
         {
@@ -109,16 +131,12 @@ namespace KYHdag5_ListorOchSträngar
 
                 sum += numberArray[i];
             }
-
             Console.WriteLine($"Detta är totala summan av alla talen {sum}");
-
         }
-
 
         public void Labb4()
         {
             bool run = true;
-
             var listOfNumbers = new List<int>();
 
             while (run)
@@ -199,13 +217,8 @@ namespace KYHdag5_ListorOchSträngar
                         run = false;
 
                         break;
-
                 }
             }
-
-
-
-
         }
         public void Labb1()
         {
@@ -234,9 +247,6 @@ namespace KYHdag5_ListorOchSträngar
 
                 Console.WriteLine($"Du angav {dagNummer} på den platsen ligger {weekDayNames}");
             }
-
-
-
         }
 
         public void RunList4Integers()
@@ -248,7 +258,6 @@ namespace KYHdag5_ListorOchSträngar
             //numList.Add(int.Parse(Console.ReadLine()));
             //numList.Add(int.Parse(Console.ReadLine()));
             //numList.Add(int.Parse(Console.ReadLine()));
-
 
             for (int i = 0; i < 4; i++)
             {
@@ -263,7 +272,6 @@ namespace KYHdag5_ListorOchSträngar
             int[] arrayOfIntegers = new int[4];
             int maxValue = 0;
 
-
             for (int i = 0; i < 4; i++)
             {
                 Console.WriteLine("Ange ett tal");
@@ -274,9 +282,7 @@ namespace KYHdag5_ListorOchSträngar
             {
                 maxValue = arrayOfIntegers.Max();
             }
-
             Console.WriteLine(maxValue);
-
         }
     }
 }
