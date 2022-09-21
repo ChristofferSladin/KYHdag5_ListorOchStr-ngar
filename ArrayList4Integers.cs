@@ -11,6 +11,38 @@ namespace KYHdag5_ListorOchSträngar
 {
     internal class ArrayList4Integers
     {
+        public void Labb7()
+        {
+            Console.WriteLine("Ange hur många mätnigar du vill göra");
+            int antalOlikaTemp = int.Parse(Console.ReadLine());
+
+            var listWithTemp = new List<float>();
+            var listWithPlaces = new List<string>();
+
+            for (int i = 0; i < antalOlikaTemp; i++)
+            {
+                Console.Write("Ange plats: ");
+                listWithPlaces.Add(Console.ReadLine());
+                Console.Write("Ange temperaturen på denna plats");
+                listWithTemp.Add(float.Parse(Console.ReadLine()));
+            }
+
+            float midTemp = 0;
+            for (int i = 0; i < listWithTemp.Count; i++)
+            {
+                midTemp += listWithTemp[i];
+            }
+            midTemp /= listWithTemp.Count;
+
+            for (int i = 0; i < listWithTemp.Count; i++)
+            {
+                Console.WriteLine($"Plats: {listWithPlaces[i]}\nTemp: {listWithTemp[i]}");
+            }
+
+            Console.WriteLine($"\nMax temperaturen är: {listWithTemp.Max()}\nMedel Temperaturen är: {midTemp}");
+
+        }
+
         public void Labb6()
         {
             Console.WriteLine("Ange hur många mätnigar du vill göra");
